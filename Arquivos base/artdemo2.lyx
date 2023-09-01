@@ -1,0 +1,3445 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\setlength{\jot}{0.25\jot}
+\usepackage{latexsym}
+\usepackage{listings}
+\usepackage{amssymb}
+
+\lstdefinelanguage{algo}{
+  keywordstyle=[1]{\keywordstyle},
+  keywordstyle=[2]{\operatorstyle},
+  keywordstyle=[3]{\typestyle},
+  keywordstyle=[4]{\functionstyle},
+  identifierstyle={\identifierstyle},
+  keywords=[1]{%
+    início,fim,%
+    programa,procedimento,função,subrotina,%
+    enquanto,fa\c ca,para,até,próximo,repita,até,loop,continue,%
+    se,então,senão%
+    retorna},
+  literate={-}{$-$}1 {^}{$^\wedge$}1
+           {>}{{$>$\ }}1 {<}{{$<$\ }}1
+           {>=}{{$\geqslant$\ }}1 {<=}{{$\leqslant$\ }}1 
+           {:=}{{$\gets$\ }}1 {!=}{{$\ne$\ }}1 {<>}{{$\ne$\ }}1
+           {->}{{$\;\to\;$}}1
+           {&&}{{\keywordstyle and\ }}4 {{||}}{{\keywordstyle or\ }}3
+           {;}{\hspace{0.2em};}2 {,}{\hspace{0.2em},}2
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {ã}{{\~a}}1 {õ}{{\~o}}1 
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+  {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1
+}
+
+\lstset{%
+  language={algo},
+  columns=fullflexible,
+  numbers=left,
+  numberstyle=\scriptsize,
+  mathescape=true,
+  xleftmargin=.04\textwidth
+  %escapeinside={@}{@}
+}
+
+\newcommand\keywordstyle{\bfseries\upshape}
+\newcommand\operatorstyle{\mdseries\upshape}
+\newcommand\typestyle{\mdseries\upshape}
+\newcommand\functionstyle{\mdseries\scshape}
+
+\newcommand\identifierstyle{\mdseries\itshape}
+
+\newcommand\addkeywords[1]{%
+  \lstset{morekeywords=[1]{#1}}}
+
+\newcommand\addoperators[1]{%
+  \lstset{morekeywords=[2]{#1}}}
+
+\newcommand\addtypes[1]{%
+  \lstset{morekeywords=[3]{#1}}}
+
+\newcommand\addfunctions[1]{%
+  \lstset{morekeywords=[4]{#1}}}
+  
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbh
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Escrevendo seu relatório
+\end_layout
+
+\begin_layout Author
+João B.
+ Oliveira
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thanks{
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+oliveira@inf.pucrs.br
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+, Marcelo Cohen 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thanks{
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+marcelo.cohen@pucrs.br
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Faculdade de Informática — PUCRS
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+
+\emph on
+O abstract ou resumo deve dar uma descrição curta (um ou dois parágrafos)
+ do que será tratado no texto, para que o leitor possa decidir se o assunto
+ interessa ou não.
+ Note também que a data está em português, com o mês em minúscula.
+ Isso é a língua portuguesa e pode ser que seu editor de texto não saiba
+ disso.
+\end_layout
+
+\begin_layout Abstract
+Este artigo descreve alternativas de solução para o primeiro problema proposto
+ na disciplina de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ldots
+\end_layout
+
+\end_inset
+
+ no semestre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ldots
+\end_layout
+
+\end_inset
+
+, que trata da representação dos inteiros de 2 até 100 na forma 
+\begin_inset Formula $2^{i}\div3^{j}$
+\end_inset
+
+.
+ São apresentadas três possibilidades de solução para o problema e sua eficiênci
+a é analisada.
+ Em seguida as representações obtidas para os números são mostradas.
+\end_layout
+
+\begin_layout Abstract
+
+\emph on
+Note que seu trabalho pode pedir mais que isso! Você pode ter que oferecer
+ exemplos de uso, casos de teste, e outros itens que não foram pedidos neste
+ trabalho!
+\end_layout
+
+\begin_layout Section*
+Introdução
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+O papel da introdução é descrever o problema que vai ser resolvido, de onde
+ ele veio, qual o seu contexto e se já sabemos algo a respeito dele (se
+ alguém já tentou resolver, etc.) e depois descrever os passos que serão
+ apresentados para a resolução, mostrando uma espécie de roteiro do que
+ vem a seguir.
+ Não esqueça de que o leitor deve entender o problema pra entender sua solução!
+\end_layout
+
+\begin_layout Standard
+Dentro do escopo da disciplina de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ldots
+\end_layout
+
+\end_inset
+
+, o primeiro problema de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ldots
+\end_layout
+
+\end_inset
+
+ pode ser resumido assim: dado um número 
+\begin_inset Formula $a=1$
+\end_inset
+
+, outros números podem ser produzidos seguindo-se as duas regras:
+\end_layout
+
+\begin_layout Enumerate
+Multiplicando por 2 um número já produzido.
+\end_layout
+
+\begin_layout Enumerate
+Dividindo por 3 um número já produzido e descartando a parte fracionária
+ (divisão inteira).
+\end_layout
+
+\begin_layout Standard
+Por exemplo, seguindo estas regras temos que
+\begin_inset Formula 
+\[
+10=1\times2\times2\times2\times2\times2\div3=32\div3.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O problema a ser resolvido é determinar a representação de todos os inteiros
+ de 2 até 100 seguindo apenas estas regras.
+ Para a saída, os números devem ser apresentados em ordem crescente, apresentand
+o-se quantas vezes tivemos de usar cada regra.
+ Segundo o enunciado do trabalho, a linha da saída para 10 seria a seguinte:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\align center
+10 = 2^5 / 3^1
+\end_layout
+
+\begin_layout Standard
+O enunciado também informa que os resultados possíveis não são únicos, muitos
+ números podem ser obtidos em mais de uma forma, portanto deve-se dar preferênci
+a aos expoentes menores.
+ Algumas regras e considerações adicionais são:
+\end_layout
+
+\begin_layout Enumerate
+Não é permitido usar inteiros especiais, como 
+\family typewriter
+long
+\family default
+, 
+\family typewriter
+BigInt
+\family default
+ e outros inteiros extra-longos.
+ O maior tipo inteiro deve ter 32 bits.
+\end_layout
+
+\begin_layout Enumerate
+É permitido usar 
+\family typewriter
+float,
+\family default
+ 
+\family typewriter
+real
+\family default
+ e 
+\family typewriter
+double
+\family default
+ em tarefas auxiliares, mas não é permitido calcular potências com eles.
+\end_layout
+
+\begin_layout Enumerate
+Se um número não precisa ser dividido por 3, pode-se apresentar 
+\family typewriter
+3^0
+\family default
+ na saída.
+\end_layout
+
+\begin_layout Standard
+Para resolver o problema proposto, analisaremos três possíveis alternativas
+ de solução, bem como suas características, optando por uma soluçao bastante
+ eficiente ainda que pouco intuitiva.
+ Em seguida os resultados obtidos serão apresentados, bem como as conclusões
+ obtidas no decorrer do trabalho.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Talvez você tenha percebido que este texto é todo escrito no plural: fizemos,
+ faremos, analisaremos, apresentaremos.
+
+\emph default
+ 
+\series bold
+\emph on
+Nunca
+\series default
+\emph default
+ 
+\emph on
+usamos o singular (fiz, analisei, pensei, etc), mesmo que você esteja trabalhand
+o sozinho.
+ Outra possibilidade, melhor ainda, é usar termos passivos: faz-se, analiza-se,
+ demonstra-se, etc.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+O texto é em espaço simples, pois é muito chato ler um trabalho em espaço
+ maior: fica evidente que quem escreveu precisava encher papel.
+ Sobre o tamanho de letra, recomenda-se 10, 11 ou 12.
+ Este texto foi originalmente feito em tamanho 12 porque iria ser reduzido.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Sobre o português: não existe espaço antes de uma vírgula, depois de dois
+ pontos sempre vêm minúscula e coloca-se espaço em branco antes de abrir
+ um par de parênteses.
+ Por dentro dos parênteses não se coloca espaço, o texto vem colado neles.
+ Procure estes detalhes no texto!
+\end_layout
+
+\begin_layout Section*
+Primeira solução
+\end_layout
+
+\begin_layout Standard
+Depois de considerar o problema, podemos perceber que o valor inicial 
+\begin_inset Formula $a=1$
+\end_inset
+
+ serve apenas para fornecer um número inicial sobre o qual podem ser aplicadas
+ as regras para gerar outros números, e portanto seu valor não tem importância
+ especial.
+ Com esta constatação, e sabendo que em um inteiro de 32 bits podemos armazenar
+ números até 
+\begin_inset Formula $2^{31}$
+\end_inset
+
+ ou até 
+\begin_inset Formula $3^{20}$
+\end_inset
+
+ (obtivemos estes dados através de testes), podemos propor uma solução bastante
+ simples: bastaria criar frações 
+\begin_inset Formula $2^{i}/3^{j}$
+\end_inset
+
+ com todas as possibilidades de expoentes para 
+\begin_inset Formula $2^{i}$
+\end_inset
+
+ (ou seja, 
+\begin_inset Formula $0\leq i\leq31$
+\end_inset
+
+) e para 
+\begin_inset Formula $3^{j}$
+\end_inset
+
+ (ou seja, 
+\begin_inset Formula $0\leq j\leq20$
+\end_inset
+
+), verificando quais números são gerados.
+ O total de números a serem testados é de apenas 
+\begin_inset Formula $32*21=672$
+\end_inset
+
+, portanto o algoritmo deve ser executado com grande velocidade.
+ Um algoritmo implementando esta idéia seria parecido com este:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addfunctions{Algoritmo1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+registro tab[100] {
+\end_layout
+
+\begin_layout Plain Layout
+
+  int achei, int exp2, int exp3
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+procedimento Algoritmo1
+\end_layout
+
+\begin_layout Plain Layout
+
+  para i := 1 até 100 faça
+\end_layout
+
+\begin_layout Plain Layout
+
+    tab[i] := FALSE
+\end_layout
+
+\begin_layout Plain Layout
+
+  fim
+\end_layout
+
+\begin_layout Plain Layout
+
+  para i := 1 até 100 faça
+\end_layout
+
+\begin_layout Plain Layout
+
+    para j := 0 até 20 faça
+\end_layout
+
+\begin_layout Plain Layout
+
+      num := ${2^i}/{3^j}$
+\end_layout
+
+\begin_layout Plain Layout
+
+      // Se está na faixa desejada e ainda não encontramos
+\end_layout
+
+\begin_layout Plain Layout
+
+      se num >= 100 e tab[num] = FALSE então
+\end_layout
+
+\begin_layout Plain Layout
+
+        tab[num].achei := TRUE
+\end_layout
+
+\begin_layout Plain Layout
+
+        tab[num].exp2 := i
+\end_layout
+
+\begin_layout Plain Layout
+
+        tab[num].exp3 := j
+\end_layout
+
+\begin_layout Plain Layout
+
+      fim
+\end_layout
+
+\begin_layout Plain Layout
+
+    fim
+\end_layout
+
+\begin_layout Plain Layout
+
+  fim
+\end_layout
+
+\begin_layout Plain Layout
+
+fim
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Foi criada uma tabela para manter os resultados encontrados, e a cada resultado
+ encontrado seus expoentes são armazenados.
+ Ao final basta imprimir a tabela, colocando-a no formato adequado de saída
+ (este algoritmo é simples e não será mostrado aqui).
+\end_layout
+
+\begin_layout Standard
+Também é interessante perceber que a solução apresentada até o momento acha
+ os menores expoentes possíveis, mas precisa manter o controle de que números
+ já foram encontrados, para não escrever expoentes maiores sobre valores
+ já armazenados.
+ Uma maneira muito simples de descartar este tipo de controle é fazendo
+ o loop externo 
+\series bold
+decrescente
+\series default
+, garantindo assim que os menores expoentes serão encontrados por último,
+ e permitindo a escrita sobre valores já encontrados.
+ Esta solução seria:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addfunctions{Algoritmo2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+registro tab[100] {
+\end_layout
+
+\begin_layout Plain Layout
+
+  int exp2, int exp3
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+procedimento Algoritmo2
+\end_layout
+
+\begin_layout Plain Layout
+
+  para i := 31 até 0 faça
+\end_layout
+
+\begin_layout Plain Layout
+
+    para j := 0 até 20 faça
+\end_layout
+
+\begin_layout Plain Layout
+
+      num := ${2^i}/{3^j}$
+\end_layout
+
+\begin_layout Plain Layout
+
+      se num <= 100 então
+\end_layout
+
+\begin_layout Plain Layout
+
+        tab[num].exp2 := i
+\end_layout
+
+\begin_layout Plain Layout
+
+        tab[num].exp3 := j
+\end_layout
+
+\begin_layout Plain Layout
+
+      fim
+\end_layout
+
+\begin_layout Plain Layout
+
+    fim
+\end_layout
+
+\begin_layout Plain Layout
+
+  fim
+\end_layout
+
+\begin_layout Plain Layout
+
+fim
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta idéia é bastante simples e eficiente, porém um teste mostra que ela
+ acha apenas 53 dos 99 números desejados.
+ Com isto podemos concluir que os outros 46 valores devem ser obtidos com
+ expoentes maiores, e os números envolvidos não podem ser representados
+ em inteiros de 32 bits.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Note que esta seção dá uma idéia inicial, analisa-a de forma rápida e diz
+ porque ela não serve, também de forma rápida, sem perder o tempo do leitor
+ com papo furado.
+ Essa precisão e detalhe são sinais de um trabalho onde vem coisas mais
+ interessantes mais tarde.
+ Veja que não foi usada uma linguagem de programação com todos os detalhezinhos!
+ Os algoritmos estão em uma linguagem simplificada, que permite que se entenda
+ rapidamente o que deve ser feito, sem excesso de detalhes inúteis.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Perceba também que o código não é cheio de explicações óbvias e inúteis
+ (esta linha incrementa o contador, esta linha calcula o número), mas é
+ clara o bastante para que outra pessoa entenda o que é feito e reproduza
+ o algoritmo em sua linguagem preferida.
+ Uma falha: terminamos dizendo que achamos 53 dos 99 números, mas sem dizer
+ quais foram nem falar do tempo necessário para encontrá-los.
+ 
+\series bold
+Moral
+\series default
+: quando terminar de falar de uma solução, apresente os resultados, comente
+ o tempo e as (possíveis) falhas!!
+\end_layout
+
+\begin_layout Section*
+Segunda solução
+\end_layout
+
+\begin_layout Standard
+Uma vez que a alternativa mais simples falha em quase metade dos casos,
+ optamos por desenvolver uma abordagem mais cuidadosa, experimentando um
+ truque bastante simples: se já tivermos os expoentes para certos números
+ (obtidos, por exemplo, com o método anterior), podemos criar novos números
+ a partir destes.
+ Por exemplo, se sabemos que 
+\begin_inset Formula $2=2^{1}\div3^{0}$
+\end_inset
+
+ e que 
+\begin_inset Formula $3=2^{5}\div3^{2}$
+\end_inset
+
+, então podemos tentar produzir 6 através da combinação das duas representações:
+ 
+\begin_inset Formula $6=2*3=2^{1+5}\div3^{0+2}=2^{6}\div3^{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Infelizmente, conferindo o resultado descobrimos que 
+\begin_inset Formula $2^{6}\div3^{2}=64/9=7.1111\ldots$
+\end_inset
+
+ e portanto não obtemos 6, e sim 7.
+ Tabulando os resultados e prestando atenção nos valores, temos
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor truncado
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fórmula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor exato
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Excesso
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{1}\div3^{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{5}\div3^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.5555\SpecialChar ldots
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5555\SpecialChar ldots
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{6}\div3^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.1111\SpecialChar ldots
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.1111\SpecialChar ldots
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O fenômeno parece bastante simples: como a representação de 3 carrega consigo
+ um erro (excesso) de 0.5555\SpecialChar ldots
+, ao multiplicar 3 por 2 o erro também dobra,
+ fazendo com que o valor obtido seja maior do que 6.
+ Como se pode ver na tabela, o erro para 6 é de 1.1111\SpecialChar ldots
+, exatamente o dobro
+ de 0.5555\SpecialChar ldots
+.
+\end_layout
+
+\begin_layout Standard
+Desta maneira, podemos perceber que um mecanismo simples de geração de novos
+ números a partir de outros que já são conhecidos teria, no mínimo, os seguintes
+ problemas:
+\end_layout
+
+\begin_layout Enumerate
+São necessários valores iniciais que são usados como ``sementes''.
+ Estes valores iniciais podem ser obtidos com o método anterior, por exemplo.
+\end_layout
+
+\begin_layout Enumerate
+Os números sendo procurados devem ser decompostos para que se saiba que
+ outros números devem ser multiplicados para obtê-los, da mesma forma que
+ constatamos que 6 poderia ser produzido com 2 e 3.
+ Esta decomposição é relativamente trabalhosa, e envolve números primos
+ e vários tipos de testes.
+\end_layout
+
+\begin_layout Enumerate
+É preciso conhecer a representação para os números primos, pois estes não
+ podem ser obtidos multiplicando-se outros valores.
+ Por exemplo, o valor 19 não poderá ser decomposto e sua representação tem
+ que ser descoberta de forma independente.
+\end_layout
+
+\begin_layout Enumerate
+É preciso ter controle do erro sendo transmitido entre os números, a fim
+ de garantir que estamos chegando aos números corretos.
+\end_layout
+
+\begin_layout Standard
+Por todos estes motivos optamos por não desenvolver esta solução, mas com
+ o raciocínio feito até o momento podemos elaborar uma solução aparentemente
+ mais complexa, mas que se revela mais simples quando analisada.
+ Esta solução será apresentada a seguir.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Veja como esta segunda solução se apoia sobre a primeira, e é descrita em
+ um pouco mais de detalhe.
+ Motivo: além de ser menos óbvia, ela serve de ponte para a terceira alternativa
+, que será a verdadeira resposta, e aqui precisamos deixar claro como funciona
+ o mecanismo de propagação do erro.
+ Isto é fundamental para o que vem a seguir.
+ Note que esta solução é descartada com uma lista de motivos, para que ninguém
+ pergunte porque ela não foi implementada.
+\end_layout
+
+\begin_layout Section*
+Terceira solução
+\end_layout
+
+\begin_layout Standard
+Se já sabemos como o erro se propaga quando a regra da multiplicação por
+ 2 é usada, podemos pensar em uma alternativa: em vez de procurar individualment
+e cada número entre 2 e 100, podemos iniciar uma busca que vai aplicando
+ as regras que temos e controlando o erro envolvido, anotando os números
+ encontrados no decorrer do processamento.
+ É claro que para isto precisamos saber exatamente como se propaga o erro
+ quando as regras são aplicadas, mas já conhecemos o caso da primeira regra,
+ e agora só falta analisar o que acontece quando se aplica a segunda.
+ A maneira mais simples é fazendo um teste, iniciando com 32 e dividindo
+ duas vezes, anotando os erros:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor truncado
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fórmula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor exato
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Erro
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{5}\div3^{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{5}\div3^{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.6666\SpecialChar ldots
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6666\SpecialChar ldots
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2^{5}\div3^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.5555\SpecialChar ldots
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5555\SpecialChar ldots
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+É bastante claro que o erro não é simplesmente dividido por três a cada
+ aplicação da regra, pois se assim fosse não haveria erro para 10 ou 3,
+ já que o erro inicial era zero.
+ Assim, imaginamos que o erro para a divisão seja calculado de forma mais
+ complicada, e depois de alguns testes a regra obtida é a seguinte: dado
+ um número 
+\begin_inset Formula $n$
+\end_inset
+
+ com erro 
+\begin_inset Formula $e_{n,}$
+\end_inset
+
+ ao aplicarmos a regra de divisão obteremos um novo número 
+\begin_inset Formula $n/3$
+\end_inset
+
+ com erro dado por 
+\begin_inset Formula $e_{n}/3+(n\bmod3)/3=(e_{n}+n\bmod3)/3$
+\end_inset
+
+.
+ Embora esta regra pareça complicada, podemos fazer um teste com os números
+ anteriores: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor exato
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Erro
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.6666\SpecialChar ldots
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0/3+(32\bmod3)/3=0+2/3=0.6666\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.5555\SpecialChar ldots
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.6666\ldots/3+(10\bmod3)/3=0.2222\ldots+0.3333\ldots=0.5555\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Agora que sabemos como o erro se propaga quando as regras são aplicadas,
+ podemos facilmente propor uma solução que recebe um valor inicial e aplica
+ repetidamente as regras dadas, mantendo controle do erro e anotando novos
+ valores encontrados.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Perceba que a fórmula apresentada não foi provada nem justificada de forma
+ sólida! Isto deve ser melhorado para que um leitor entenda 
+\series bold
+por que
+\series default
+ ela funciona! 
+\end_layout
+
+\begin_layout Standard
+Este algoritmo pode funcionar de forma recursiva, da seguinte forma:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addfunctions{pesquisa}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+registro tab[100] {
+\end_layout
+
+\begin_layout Plain Layout
+
+  int achei, int exp2, int exp3
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+para i := 1 até 100 faça
+\end_layout
+
+\begin_layout Plain Layout
+
+  tab[i].achei := FALSE
+\end_layout
+
+\begin_layout Plain Layout
+
+fim
+\end_layout
+
+\begin_layout Plain Layout
+
+achados := 0
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+procedimento pesquisa(int num, int exp2, int exp3, real err)
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Verificamos se o erro ultrapassa 1.
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Se ultrapassa estamos falando de outro número...
+\end_layout
+
+\begin_layout Plain Layout
+
+  se err >= 1 então
+\end_layout
+
+\begin_layout Plain Layout
+
+    num := num + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    err := err - 1
+\end_layout
+
+\begin_layout Plain Layout
+
+  fim
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Armazenamos os expoentes...
+\end_layout
+
+\begin_layout Plain Layout
+
+  se num <= 100 e tab[num].achei := FALSE então
+\end_layout
+
+\begin_layout Plain Layout
+
+    tab[num].exp2 := exp2
+\end_layout
+
+\begin_layout Plain Layout
+
+    tab[num].exp3 := exp3
+\end_layout
+
+\begin_layout Plain Layout
+
+    tab[num].achei := TRUE
+\end_layout
+
+\begin_layout Plain Layout
+
+    achados := achados + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+  fim
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Se ainda faltam números, reaplicar regras...
+\end_layout
+
+\begin_layout Plain Layout
+
+  se achados < 100 então
+\end_layout
+
+\begin_layout Plain Layout
+
+    pesquisa(num * 2, exp2 + 1, exp3, err * 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    pesquisa(num / 3, exp2, exp3 + 1, (err + n mod 3) / 3)
+\end_layout
+
+\begin_layout Plain Layout
+
+  fim
+\end_layout
+
+\begin_layout Plain Layout
+
+fim
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Primeira chamada
+\end_layout
+
+\begin_layout Plain Layout
+
+pesquisa(1, 0, 0, 0)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+A solução é quase essa, mas afinal se você correr pra implementar e funcionar
+ de cara seria muito fácil, e isso não dá pra deixar.
+ Num artigo de verdade eu colocaria a solução certinha, mas este é uma demonstra
+ção, por isso você pode pensar a respeito.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Se você está usando linguagens orientadas a objetos: dar uma lista de classes
+ que você criou
+\emph default
+ 
+\series bold
+\emph on
+não
+\series default
+\emph default
+ 
+\emph on
+é explicação pra nada! Falar das classes não basta, você deve esclarecer
+ o que elas fazem! Ou seja, como trabalham, que algoritmos usam, como são
+ interligadas.
+ Pense como é pouco informativo: ``\SpecialChar ldots
+daí fiz umas classes A, B e C, que resolvem
+ o problema.'' Isso diz alguma coisa?
+\end_layout
+
+\begin_layout Standard
+A primeira chamada para a função que pesquisa os números deve ser feita
+ com um número inicial, e é bastante simples determinar este número: deve
+ ser 
+\begin_inset Formula $a$
+\end_inset
+
+, o número fornecido inicialmente para o problema.
+ Desta forma, passamos inicialmente o valor 1, com expoente 0 para 2 e 3
+ e com erro também zero.
+ A partir daí o algoritmo é executado até que 100 valores estejam na tabela,
+ e em seguida a tabela pode ser impressa no formato adequado.
+\end_layout
+
+\begin_layout Standard
+Nesta versão de algoritmo não garantimos que estamos encontrando os menores
+ expoentes possíveis, mas o algoritmo pode ser modificado para usar comparações
+ com valores já existentes, ou manter listas de expoentes em vez de apenas
+ uma tabela.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Perceba que você não precisa ser a mãe do leitor, explicando cada linha
+ do código e detalhe por detalhe.
+ Se você acha que ja explicou o bastante e a idéia está clara, deixe que
+ o leitor pense um pouco para entender como as coisas funcionam.
+ Cuidado: isso
+\emph default
+ 
+\series bold
+\emph on
+não
+\series default
+\emph default
+ 
+\emph on
+quer dizer que você deve deixá-lo perdido e no escuro.
+ Você também não pode colocar cinco páginas de código e esperar que ele
+ simplesmente leia e entenda.
+\end_layout
+
+\begin_layout Section*
+Resultados
+\end_layout
+
+\begin_layout Standard
+Depois de implementar o algoritmo acima em linguagem C e executá-lo num
+ tempo de aproximadamente meio segundo, obtivemos os seguintes resultados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="25" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+1 = 2^0 / 3^0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+26 = 2^19 / 3^9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+51 = 2^58 / 3^33
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+76 = 2^76 / 3^44
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+2 = 2^1 / 3^0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+27 = 2^46 / 3^26
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+52 = 2^39 / 3^21
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+77 = 2^57 / 3^32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+3 = 2^5 / 3^2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+28 = 2^8 / 3^2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+53 = 2^20 / 3^9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+78 = 2^38 / 3^20
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+4 = 2^2 / 3^0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+29 = 2^16 / 3^7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+54 = 2^66 / 3^38
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+79 = 2^19 / 3^8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+5 = 2^4 / 3^1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+30 = 2^62 / 3^36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+55 = 2^47 / 3^26
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+80 = 2^84 / 3^49
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+6 = 2^9 / 3^4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+31 = 2^24 / 3^12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+56 = 2^9 / 3^2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+81 = 2^65 / 3^37
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+7 = 2^6 / 3^2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+32 = 2^5 / 3^0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+57 = 2^74 / 3^43
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+82 = 2^130 / 3^78
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+8 = 2^3 / 3^0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+33 = 2^13 / 3^5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+58 = 2^55 / 3^31
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+83 = 2^46 / 3^25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+9 = 2^8 / 3^3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+34 = 2^59 / 3^34
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+59 = 2^17 / 3^7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+84 = 2^27 / 3^13
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+10 = 2^5 / 3^1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+35 = 2^21 / 3^10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+60 = 2^82 / 3^48
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+85 = 2^92 / 3^54
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+11 = 2^13 / 3^6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+36 = 2^48 / 3^27
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+61 = 2^63 / 3^36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+86 = 2^73 / 3^42
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+12 = 2^10 / 3^4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+37 = 2^10 / 3^3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+62 = 2^44 / 3^24
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+87 = 2^54 / 3^30
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+13 = 2^18 / 3^9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+38 = 2^56 / 3^32
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+63 = 2^25 / 3^12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+88 = 2^35 / 3^18
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+14 = 2^7 / 3^2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+39 = 2^18 / 3^8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+64 = 2^71 / 3^41
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+89 = 2^16 / 3^6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+15 = 2^23 / 3^12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+40 = 2^64 / 3^37
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+65 = 2^52 / 3^29
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+90 = 2^81 / 3^47
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+16 = 2^4 / 3^0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+41 = 2^45 / 3^25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+66 = 2^33 / 3^17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+91 = 2^146 / 3^88
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+17 = 2^20 / 3^10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+42 = 2^26 / 3^13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+67 = 2^14 / 3^5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+92 = 2^62 / 3^35
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+18 = 2^9 / 3^3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+43 = 2^53 / 3^30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+68 = 2^79 / 3^46
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+93 = 2^43 / 3^23
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+19 = 2^17 / 3^8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+44 = 2^15 / 3^6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+69 = 2^60 / 3^34
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+94 = 2^24 / 3^11
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+20 = 2^44 / 3^25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+45 = 2^80 / 3^47
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+70 = 2^41 / 3^22
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+95 = 2^89 / 3^52
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+21 = 2^6 / 3^1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+46 = 2^42 / 3^23
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+71 = 2^22 / 3^10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+96 = 2^154 / 3^93
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+22 = 2^14 / 3^6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+47 = 2^23 / 3^11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+72 = 2^68 / 3^39
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+97 = 2^70 / 3^40
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+23 = 2^22 / 3^11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+48 = 2^69 / 3^40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+73 = 2^49 / 3^27
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+98 = 2^51 / 3^28
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+24 = 2^30 / 3^16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+49 = 2^31 / 3^16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+74 = 2^30 / 3^15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+99 = 2^32 / 3^16
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+25 = 2^11 / 3^4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+50 = 2^12 / 3^4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+75 = 2^95 / 3^56
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family typewriter
+100 = 2^97 / 3^57
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Após a obtenção destes valores, estes foram testados com ferramentas capazes
+ de lidar com os grandes números envolvidos, e todos os resultados foram
+ confirmados corretos.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Por favor, não esqueça de apresentar os resultados, afinal deve ser isso
+ que seu leitor quer ver!
+\end_layout
+
+\begin_layout Section*
+Conclusões
+\end_layout
+
+\begin_layout Standard
+As abordagens iniciais, mesmo oferecendo apenas resultados parciais, contribuíra
+m bastante para o entendimento do problema e abriram caminho para a solução
+ definitiva.
+ Esta se mostrou bastante simples e eficiente, embora tenha exigido um estudo
+ de como o erro se propaga quando as regras são aplicadas a novos números.
+ A solução implementada não se preocupou em achar sempre os menores expoentes
+ possíveis, mas mesmo assim ela foi bastante eficiente e os expoentes encontrado
+s não são excessivamente grandes (foram feitas comparações com o primeiro
+ algoritmo apresentado, e as diferenças foram poucas).
+ Além disso, a solução recursiva adotada foi razoavelmente elegante e clara,
+ não precisando de uma implementação complicada.
+\end_layout
+
+\begin_layout Standard
+Embora não tenham sido mostrados neste artigo, foram feitos testes com outros
+ valores iniciais (
+\begin_inset Formula $a\not=1)$
+\end_inset
+
+ e para números indo até bem mais do que 100, o algoritmo também funcionou
+ bem.
+\end_layout
+
+\begin_layout Standard
+Acreditamos ter desenvolvido uma solução interessante e barata a um problema
+ relativamente complexo, já que em uma linguagem de programação usual não
+ existe suporte direto para tratar com os números envolvidos, e conseguimos
+ determinar resultados corretos que envolvem grandes números.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Suas conclusões não precisam ser geniais nem mudar o mundo.
+ Veja que a parte inteligente do artigo já foi feita, e veio antes! Agora
+ é a hora de fechar e dizer o que você acha que poderia vir depois, etc
+ etc.
+ E se você está pensando em dizer coisas como ``Provavelmente existem soluções
+ melhores'', então diga ao menos o que você pensa que pode melhorar (por
+ exemplo, neste artigo eu gostaria de evitar o uso de números em ponto flutuante
+ e preferiria trocar por algum tipo de controle com inteiros).
+ Se você não der opções e só disser que dá pra fazer melhor, está se diminundo
+ de graça.
+ Pra que isso?
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+A bibliografia abaixo não foi usada neste artigo, e serve apenas de exemplo
+ para a formatação.
+ Outros exemplos estão na página da biblioteca da PUCRS.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "1"
+
+\end_inset
+
+Brassard, G.; Bratley, P: ``
+\series bold
+Fundamentals of algorithmics
+\series default
+''.
+ Prentice Hall, Englewood Cliffs, New Jersey, 1996.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "2"
+
+\end_inset
+
+Cormen, T.
+\begin_inset space ~
+\end_inset
+
+H.; Leiserson, E.
+\begin_inset space ~
+\end_inset
+
+C.; Rivest, R.
+\begin_inset space ~
+\end_inset
+
+L.: 
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+Introduction to Algorithms
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+.
+ Mc-Graw Hill Book Co., The MIT Electrical Engineering and Computer Science
+ Series, Cambridge, 1990.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "3"
+
+\end_inset
+
+Graham, R.
+\begin_inset space ~
+\end_inset
+
+L.; Knuth, D.
+\begin_inset space ~
+\end_inset
+
+E.; Patashnik, O.: 
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+Concrete mathematics
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+.
+ Addison-Wesley, Reading, 1989.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "4"
+
+\end_inset
+
+Moret, B.
+\begin_inset space ~
+\end_inset
+
+M.; Shapiro, H.
+\begin_inset space ~
+\end_inset
+
+D.: ``
+\series bold
+Algorithms from P to NP: design and efficiency
+\series default
+''.
+ Addison-Wesley, Reading, 1990.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "5"
+
+\end_inset
+
+Lueker, G.
+\begin_inset space ~
+\end_inset
+
+S.: ``
+\emph on
+Some techniques for solving recurrences
+\emph default
+''.
+ Computing Surveys, Vol.
+ 12, no.
+ 4, dezembro 1980.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "6"
+
+\end_inset
+
+Rawlins, Gregory J.
+\begin_inset space ~
+\end_inset
+
+E.: ``
+\series bold
+Compared to what? An introduction to the analysis of algorithms
+\series default
+'', Computer Science Press, New York, 1992.
+\end_layout
+
+\begin_layout Section*
+Outros detalhes
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+(Coisas que não entram num artigo, mas que vou escrever aqui porque deve
+ ser ditas em algum lugar).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Em primeiríssimo lugar: você está numa Universidade e portanto deve ter
+ ido à escola por uns onze anos pelo menos.
+ Você teve aulas de português por cerca de sete desses anos, várias vezes
+ por semana e ainda prestou prova para o vestibular.
+ Seu editor de texto, por outro lado, não teve aula nenhuma e provavelmente
+ foi (meio mal) adaptado do inglês.
+ Mostre um pouco de respeito por si mesmo e desligue 
+\series bold
+tudo o que puder
+\series default
+.
+ Desligue todas as correções automáticas e assuma a responsabilidade pelo
+ que você sabe.
+\end_layout
+
+\begin_layout Enumerate
+Acentos ainda existem em português, e deverão continuar por muito tempo.
+ Use-os.
+\end_layout
+
+\begin_layout Enumerate
+Note a consistência no que está escrito: o valor inicial 
+\begin_inset Formula $a$
+\end_inset
+
+, por exemplo, está sempre escrito da mesma forma, em itálico, para que
+ o leitor não encontre cinco tipos de letra 
+\begin_inset Formula $a$
+\end_inset
+
+ diferentes e tenha de lembrar o que cada uma significa.
+ Isto mostra que o autor teve cuidado ao escrever.
+\end_layout
+
+\begin_layout Enumerate
+Note que os fontes são sempre coerentes: texto em Times, matemática em itálico,
+ algoritmos em Typewriter.
+ Não há fontes maiores ou menores, nem paragrafos com fonte diferente, margem
+ ou espaçamento maiores ou menores do que os outros.
+\end_layout
+
+\begin_layout Enumerate
+Veja também que as potências estão sempre escritas corretamente no texto:
+ 
+\begin_inset Formula $x^{y}$
+\end_inset
+
+.
+ Não se usam notações como 
+\emph on
+x^y
+\emph default
+ porque elas são feias.
+ Esta notação só é usada quando se fala do formato de saída, pois ele é
+ exigido desta forma.
+ Da mesma forma, quando são necessários subscritos eles devem ser escritos
+ corretamente: 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{ij}$
+\end_inset
+
+ etc.
+ Escrever 
+\emph on
+Aj
+\emph default
+ ou 
+\emph on
+bij
+\emph default
+ é um mau sinal.
+\end_layout
+
+\begin_layout Enumerate
+Se algo está nas referências deve estar citado no texto, e se está citado
+ no texto tem de aparecer nas referências!! A maneira correta de citar uma
+ referência é: ``Segundo 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "3"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "4"
+
+\end_inset
+
+, o algoritmo precisa\SpecialChar ldots
+''
+\end_layout
+
+\begin_layout Enumerate
+Tenha cuidado com seu texto, ele deve transmitir a impressão de que foi
+ escrito com todo o cuidado do mundo.
+ Dedique tempo a ele e tente deixá-lo melhor, pois sua reputação (e nota)
+ dependem disso.
+\end_layout
+
+\begin_layout Enumerate
+Este artigo foi totalmente escrito usando \SpecialChar LyX
+, um dos melhores editores de
+ textos que existe, fazendo uso de 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+TeX
+\backslash
+
+\end_layout
+
+\end_inset
+
+ e 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+, que são sem dúvida os melhores formatadores de texto do mundo.
+ Tudo isto é software livre rodando sob LINUX.
+ Aprenda a usá-los, vai fazer bem.
+\end_layout
+
+\begin_layout Enumerate
+Para ajudar na missão ingrata de fazer um trabalho agradável para a leitura,
+ este 
+\emph on
+checklist
+\emph default
+ pode ajudar:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+labelitemi}{
+\backslash
+(
+\backslash
+Box
+\backslash
+)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Artigos não tem capa.
+\end_layout
+
+\begin_layout Itemize
+Coloquei título neste trabalho? Coloquei meu nome?
+\end_layout
+
+\begin_layout Itemize
+Usei um espaçamento legal e tamanho de fonte decente ou tem só cinco linhas
+ por página e as letras parecem manchetes?
+\end_layout
+
+\begin_layout Itemize
+O trabalho tem uma introdução, para que se entenda do que estou falando?
+ Eu contei o que ia resolver?
+\end_layout
+
+\begin_layout Itemize
+O desenvolvimento é coerente, ou parece que recortei trechos de jornal e
+ de meus colegas e grudei tudo?
+\end_layout
+
+\begin_layout Itemize
+Dá pra entender minhas explicações ou tem que ter poderes paranormais?
+\end_layout
+
+\begin_layout Itemize
+Tem o mínimo de código possível? Não dá pra ter ainda menos? Dá pra não
+ ter nenhum? Se não tem nenhum, será que deveria ter um pouco mostrando
+ as partes mais importantes? (Geralmente deveria)
+\end_layout
+
+\begin_layout Itemize
+Se tem código, eu fico falando durante páginas e páginas entorpecentes e
+ sem fim pra explicar o que ele faz, linha por linha? Posso ser 
+\series bold
+claro
+\series default
+ sem ser 
+\series bold
+chato
+\series default
+?
+\end_layout
+
+\begin_layout Itemize
+Se o trabalho pedia a resposta para algum problema, será que esqueci de
+ dar o resultado? Tinha que dar vários exemplos e testes?
+\end_layout
+
+\begin_layout Itemize
+Usei figuras pra esclarecer coisas que eram confusas, como aquelas listas
+ que usei e agora eu mesmo mal consigo entender? Como vou querer que outra
+ pessoa entenda?
+\end_layout
+
+\begin_layout Itemize
+Minhas figuras são claras? Mostram coisas acontecendo passo a passo ou estão
+ jogadas no papel? As legendas são descritivas?
+\end_layout
+
+\begin_layout Itemize
+Os dados ficam melhor se forem apresentados em tabelas? Tenho gráficos de
+ tempo e desempenho, se preciso? Com legendas, eixos, unidades, ou está
+ uma bagunça feita no Excel?
+\end_layout
+
+\begin_layout Itemize
+Lembrei de colocar minhas conclusões ao final do trabalho?
+\end_layout
+
+\begin_layout Itemize
+Coloque as minhas fontes de informação na bibliografia?
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
